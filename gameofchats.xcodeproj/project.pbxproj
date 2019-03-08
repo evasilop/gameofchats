@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		EB29393C2233006700AE21FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29393B2233006700AE21FF /* AppDelegate.swift */; };
 		EB29393E2233006700AE21FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29393D2233006700AE21FF /* ViewController.swift */; };
-		EB2939412233006700AE21FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB29393F2233006700AE21FF /* Main.storyboard */; };
 		EB2939432233006800AE21FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2939422233006800AE21FF /* Assets.xcassets */; };
 		EB2939462233006800AE21FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2939442233006800AE21FF /* LaunchScreen.storyboard */; };
+		EB29394E2233044A00AE21FF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29394D2233044A00AE21FF /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB2939382233006700AE21FF /* gameofchats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameofchats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB29393B2233006700AE21FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB29393D2233006700AE21FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EB2939402233006700AE21FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB2939422233006800AE21FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB2939452233006800AE21FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB2939472233006800AE21FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB29394D2233044A00AE21FF /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		EB29393A2233006700AE21FF /* gameofchats */ = {
 			isa = PBXGroup;
 			children = (
+				EB2939512233088800AE21FF /* Model */,
+				EB2939502233088000AE21FF /* View */,
+				EB29394F2233045800AE21FF /* Controller */,
 				EB29393B2233006700AE21FF /* AppDelegate.swift */,
-				EB29393D2233006700AE21FF /* ViewController.swift */,
-				EB29393F2233006700AE21FF /* Main.storyboard */,
 				EB2939422233006800AE21FF /* Assets.xcassets */,
 				EB2939442233006800AE21FF /* LaunchScreen.storyboard */,
 				EB2939472233006800AE21FF /* Info.plist */,
 			);
 			path = gameofchats;
+			sourceTree = "<group>";
+		};
+		EB29394F2233045800AE21FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB29394D2233044A00AE21FF /* LoginController.swift */,
+				EB29393D2233006700AE21FF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB2939502233088000AE21FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB2939512233088800AE21FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +148,6 @@
 			files = (
 				EB2939462233006800AE21FF /* LaunchScreen.storyboard in Resources */,
 				EB2939432233006800AE21FF /* Assets.xcassets in Resources */,
-				EB2939412233006700AE21FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB29393E2233006700AE21FF /* ViewController.swift in Sources */,
+				EB29394E2233044A00AE21FF /* LoginController.swift in Sources */,
 				EB29393C2233006700AE21FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EB29393F2233006700AE21FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB2939402233006700AE21FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EB2939442233006800AE21FF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.efthimiosvasilopoulos.gameofchats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.efthimiosvasilopoulos.gameofchats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
