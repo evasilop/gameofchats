@@ -11,8 +11,9 @@ import Firebase
 
 class ViewController: UITableViewController {
     
-//    let ref =  Firebase.Database().reference(fromURL: <#T##String#>)
+    var ref: DatabaseReference!
     
+//    ref = Database.database().reference()
     
 
     override func viewDidLoad() {

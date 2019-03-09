@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
+//import FirebaseAuth
 
 class LoginController: UIViewController {
     
@@ -34,8 +35,12 @@ class LoginController: UIViewController {
     }()
     
     @objc func handleRegister() {
-        print(123)
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            print("Form is not valid")
+            return
+        }
     }
+        
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -181,3 +186,5 @@ extension UIColor {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
 }
+
+
